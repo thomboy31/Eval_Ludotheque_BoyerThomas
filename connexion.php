@@ -1,6 +1,7 @@
+
 <?php
 
-
+session_start();
 include_once('utils/utils.php');
 
 if(isset($_POST['submitCo'])){
@@ -16,7 +17,7 @@ if(isset($_POST['submitCo'])){
                      if(!empty($data)){
                          if(password_verify($_POST['passwordCo'],$data["mot_de_passe"])){
                 
-                        $_SESSION['id'] = $data['id_membre'];
+                        $_SESSION['id_membre'] = $data['id_membre'];
                         $_SESSION['nom'] = $data['nom'];
                         $_SESSION['prenom'] = $data['prenom'];
                         $_SESSION['email'] = $data['email'];
@@ -54,8 +55,8 @@ include('includes/header.php');
 
         <form action="" method="post">
     <label for="email">email<input type="text" name="emailCo" id="email"></label>
-    <label for="mot_de_passe">mot de passe<input type="passwordCo" name="password" id="password"></label>
-    <input type="submit" name="submitco">
+    <label for="passwordCo">Mot de passe<input type="password" name="passwordCo" id="passwordCo">
+    <input type="submit" name="submitCo">
   </form>
   </main>  
 

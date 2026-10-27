@@ -1,10 +1,12 @@
 <?php 
-session_start(); 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 include_once('utils/utils.php'); 
 
 $nav = '<a href="./index.php">Accueil</a>'; 
 
-if (isset($_SESSION['id'])) { 
+if (isset($_SESSION['id_membre'])) { 
     $nav .= ' <span>' . htmlspecialchars($_SESSION['prenom']) . '</span>'; 
     $nav .= ' <a href="deconnexion.php">Se Déconnecter</a>'; 
     $nav .= ' <a href="ajout-jeu.php">Ajouter un Jeu</a>'; 

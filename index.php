@@ -1,5 +1,6 @@
 <?php
 
+
 include_once('utils/utils.php');
 
 $pdo = new PDO('mysql:host=localhost;dbname=ludotheque','root','root',[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
@@ -9,6 +10,7 @@ $request = $pdo->prepare('SELECT j.titre, j.joueurs_min , j.joueurs_max , j.dure
                 ORDER BY j.titre');
                 $request->execute();
                 $jeux = $request->fetchAll();
+
                 
 include('includes/header.php');
 ?>

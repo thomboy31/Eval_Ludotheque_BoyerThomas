@@ -2,7 +2,7 @@
 
 session_start();
 
-include('utils/utils.php');
+include_once('utils/utils.php');
 
 session_destroy();
 

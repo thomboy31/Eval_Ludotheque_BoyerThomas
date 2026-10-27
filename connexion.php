@@ -1,7 +1,7 @@
 <?php
 
 
-include('utils/utils.php');
+include_once('utils/utils.php');
 
 if(isset($_POST['submitCo'])){
     if(!empty($_POST['emailCo']) && !empty($_POST['passwordCo'])){

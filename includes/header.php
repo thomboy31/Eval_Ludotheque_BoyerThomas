@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-include('utils/utils.php'); 
+include_once('utils/utils.php'); 
 
 $nav = '<a href="./index.php">Accueil</a>'; 
 
